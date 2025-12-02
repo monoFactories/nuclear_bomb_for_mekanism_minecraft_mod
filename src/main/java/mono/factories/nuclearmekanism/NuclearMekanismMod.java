@@ -1,6 +1,7 @@
 package mono.factories.nuclearmekanism;
 
 import com.mojang.logging.LogUtils;
+import mono.factories.nuclearmekanism.items.ModItems;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -25,7 +26,10 @@ public class NuclearMekanismMod {
 
         modEventBus.addListener(this::commonSetup);
 
+        ModItems.register(modEventBus);
+
         MinecraftForge.EVENT_BUS.register(this);
+
         modEventBus.addListener(this::addCreative);
     }
 
