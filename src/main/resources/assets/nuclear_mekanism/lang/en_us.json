@@ -1,3 +1,5 @@
 {
-  "item.nuclear_mekanism.core_1": "Base nuclear core"
+  "item.nuclear_mekanism.core_1": "Base nuclear core",
+  "item.nuclear_mekanism.atomic_bomb_casing": "atomic bomb casing",
+  "creative_tab.nuclear_mekanism_tab": "Nuclear Mekanism"
 }

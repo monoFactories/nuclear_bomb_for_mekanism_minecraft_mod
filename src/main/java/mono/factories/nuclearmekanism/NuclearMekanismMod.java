@@ -1,6 +1,7 @@
 package mono.factories.nuclearmekanism;
 
 import com.mojang.logging.LogUtils;
+import mono.factories.nuclearmekanism.items.ModCreativeModTabs;
 import mono.factories.nuclearmekanism.items.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -29,6 +30,7 @@ public class NuclearMekanismMod {
         modEventBus.addListener(this::commonSetup);
 
         ModItems.register(modEventBus);
+        ModCreativeModTabs.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -41,9 +43,6 @@ public class NuclearMekanismMod {
 
     // Add the nuclear_mekanism block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.CORE_1);
-        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

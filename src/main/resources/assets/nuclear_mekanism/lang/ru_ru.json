@@ -1,3 +1,5 @@
 {
-  "item.nuclear_mekanism.core_1": "Базовое ядро ядерный бомбы"
+  "item.nuclear_mekanism.core_1": "Базовое ядро ядерный бомбы",
+  "item.nuclear_mekanism.atomic_bomb_casing": "Корпус ядерной бомбы",
+  "creative_tab.nuclear_mekanism_tab": "Nuclear Mekanism"
 }
