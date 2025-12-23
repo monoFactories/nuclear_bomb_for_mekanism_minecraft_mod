@@ -19,7 +19,7 @@ public class ModCreativeModTabs {
 
     public static final RegistryObject<CreativeModeTab> MOD_TAB = CREATIVE_TABS.register("nuclear_mekanism_tab",
             () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(ModItems.CORE_1.get()))
+                    .icon(() -> new ItemStack(ModItems.URANIUM_CORE_COMMON.get()))
                     .title(Component.translatable("creative_tab.nuclear_mekanism_tab"))
                     .displayItems((itemDisplayParameters, out) -> {
                         Class<ModItems> itemsClass = ModItems.class;
