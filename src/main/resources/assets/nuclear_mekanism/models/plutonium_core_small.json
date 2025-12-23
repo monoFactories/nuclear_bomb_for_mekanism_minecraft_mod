@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "nuclear_mekanism:item/nuke_core_1"
+    "layer0": "plutonium_core_small"
   }
 }
