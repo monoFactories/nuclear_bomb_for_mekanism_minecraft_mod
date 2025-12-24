@@ -1,8 +1,11 @@
 package mono.factories.nuclearmekanism.items;
 
 import mono.factories.nuclearmekanism.NuclearMekanismMod;
+import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -13,6 +16,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+import java.util.Map;
 
 public class ModCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, NuclearMekanismMod.MOD_ID);
@@ -22,7 +26,13 @@ public class ModCreativeModTabs {
                     .icon(() -> new ItemStack(ModItems.URANIUM_CORE_COMMON.get()))
                     .title(Component.translatable("creative_tab.nuclear_mekanism_tab"))
                     .displayItems((itemDisplayParameters, out) -> {
-                        Class<ModItems> itemsClass = ModItems.class;
+                        for (Item item : ForgeRegistries.ITEMS) {
+                            ResourceLocation rl = ForgeRegistries.ITEMS.getKey(item);
+                            if (rl != null && rl.getNamespace().equals(NuclearMekanismMod.MOD_ID)) {
+                                out.accept(item);
+                            }
+                        }
+                        /*Class<ModItems> itemsClass = ModItems.class;
                         for (Field field : itemsClass.getDeclaredFields()) {
                             if (Modifier.isStatic(field.getModifiers())) {
                                 try {
@@ -38,7 +48,7 @@ public class ModCreativeModTabs {
                                     NuclearMekanismMod.LOGGER.debug("exception when fill creative tab", e);
                                 }
                             }
-                        }
+                        }*/
                     })
                     .build());
 

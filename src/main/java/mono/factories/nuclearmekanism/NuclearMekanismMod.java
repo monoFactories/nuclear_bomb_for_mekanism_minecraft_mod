@@ -1,11 +1,9 @@
 package mono.factories.nuclearmekanism;
 
 import com.mojang.logging.LogUtils;
+import mono.factories.nuclearmekanism.blocks.ModBlocks;
 import mono.factories.nuclearmekanism.items.ModCreativeModTabs;
 import mono.factories.nuclearmekanism.items.ModItems;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -28,10 +26,12 @@ public class NuclearMekanismMod {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         modEventBus.addListener(this::commonSetup);
-
+        //items
         ModItems.register(modEventBus);
+        //blocks
+        ModBlocks.register(modEventBus);
+        //tabs
         ModCreativeModTabs.register(modEventBus);
-
         MinecraftForge.EVENT_BUS.register(this);
 
         modEventBus.addListener(this::addCreative);

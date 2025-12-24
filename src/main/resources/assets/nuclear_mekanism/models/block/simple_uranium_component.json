@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "nuclear_mekanism:block/simple_uranium_component"
+  }
+}

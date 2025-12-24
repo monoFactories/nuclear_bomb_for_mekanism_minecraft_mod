@@ -50,7 +50,7 @@ public class ModItems {
     public static final RegistryObject<Item> URANIUM_CORE_BIG = ITEMS.register("uranium_core_big", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> URANIUM_CORE_COMMON = ITEMS.register("uranium_core_common", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> URANIUM_CORE_SMALL = ITEMS.register("uranium_core_small", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> SIMPLE_URANIUM_COMPONENT = ITEMS.register("simple_uranium_component", () -> new Item(new Item.Properties()));
+    //public static final RegistryObject<Item> SIMPLE_URANIUM_COMPONENT = ITEMS.register("simple_uranium_component", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SMALL_PLUTONIUM_SHELL = ITEMS.register("small_plutonium_shell", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SMALL_URANIUM_SHELL = ITEMS.register("small_uranium_shell", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> THERMONUCLEAR_CORE_BIG = ITEMS.register("thermonuclear_core_big", () -> new Item(new Item.Properties()));
